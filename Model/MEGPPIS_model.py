@@ -32,24 +32,21 @@ MAP_CUTOFF = 14 # 14
 DIST_NORM = 15
 
 # INPUT_DIM
-if ADD_NODEFEATS == 'all':  # add atom features and psepose embedding
+if ADD_NODEFEATS == 'all': 
     INPUT_DIM = 54 + 7 + 1
-elif ADD_NODEFEATS == 'atom_feats':  # only add atom features
+elif ADD_NODEFEATS == 'atom_feats':  
     INPUT_DIM = 54 + 7
-elif ADD_NODEFEATS == 'psepose_embedding':  # only add psepose embedding
+elif ADD_NODEFEATS == 'psepose_embedding': 
     INPUT_DIM = 54 + 1
 elif ADD_NODEFEATS == 'no':
     INPUT_DIM = 54
-HIDDEN_DIM = 256  # hidden size of node features
-LAYER = 8  # the number of AGAT layers
+
 DROPOUT = 0.1
-ALPHA = 0.7
-LAMBDA = 1.5
 
 LEARNING_RATE = 1E-3
 WEIGHT_DECAY = 0
 BATCH_SIZE = 1
-NUM_CLASSES = 2  # [not bind, bind]
+NUM_CLASSES = 2 
 NUMBER_EPOCHS = 50
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
