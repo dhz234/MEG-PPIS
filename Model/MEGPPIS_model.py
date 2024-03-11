@@ -25,8 +25,6 @@ if torch.cuda.is_available():
 
 # model parameters
 ADD_NODEFEATS = 'all'  # all/atom_feats/psepose_embedding/no
-USE_EFEATS = True  # True/False
-
     
 MAP_CUTOFF = 14 # 14
 DIST_NORM = 15
