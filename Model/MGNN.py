@@ -11,8 +11,7 @@ import math
 from torch.nn.parameter import Parameter
 from torch.nn.modules.module import Module
 
-# LeakyReLU
-leakyRelu = nn.LeakyReLU(0.1) 
+
 # t-SNE 
 tsne = TSNE(n_components=2, perplexity=30.0, learning_rate=200.0, n_iter=1000)
 
@@ -258,7 +257,7 @@ class GraphUnet(nn.Module):
 
 class Pool(nn.Module):
 
-    def __init__(self, k, in_dim):
+    def __init__(self, k, in_dim,p):
         super(Pool, self).__init__()
         self.k = k
         self.sigmoid = nn.Sigmoid()
@@ -269,7 +268,7 @@ class Pool(nn.Module):
         Z = self.drop(h)
         weights = self.proj(Z).squeeze()
         scores = self.sigmoid(weights)
-
+        
         return top_k_graph(scores, g, h, self.k,ep)
 
 class Unpool(nn.Module):
