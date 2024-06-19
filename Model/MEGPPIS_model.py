@@ -231,8 +231,8 @@ class MEGPPIS(nn.Module):
         
         self.subegnn = GNet(nfeat,nclass)
         # self.gunet = GUNet(nfeat,nclass)
-        self.graph_layers = nn.ModuleList()
-        self.linear_layers = nn.ModuleList()             
+        # self.graph_layers = nn.ModuleList()
+        # self.linear_layers = nn.ModuleList()             
         self.criterion = nn.CrossEntropyLoss() 
         self.optimizer = torch.optim.Adam(self.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
         self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, mode='max', factor=0.3, patience=5, min_lr=1e-6)
