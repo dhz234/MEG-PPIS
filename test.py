@@ -244,16 +244,16 @@ def main():
 
 
 
-    print("Evaluate GraphPPIS on Test_60")
+    print("Evaluate on Test_60")
     test_one_dataset(Test_60, Test60_psepos_Path, 'Test_60')
     exit()
-    # print("Evaluate GraphPPIS on Test_315-28")
+    # print("Evaluate on Test_315-28")
     # test_one_dataset(Test_315_28, Test315_28_psepos_Path,'Test_315-28')
 
-    # print("Evaluate GraphPPIS on Btest_31-6")
+    # print("Evaluate on Btest_31-6")
     # test_one_dataset(Btest_31_6, Btest31_psepos_Path, 'Btest_31-6')
 
-    # print("Evaluate GraphPPIS on UBtest_31-6")
+    # print("Evaluate on UBtest_31-6")
     # test_one_dataset(UBtest_31_6, UBtest31_28_psepos_Path, 'UBtest_31-6')
 
 
