@@ -7,3 +7,4 @@ Build the environment according to the configuration in the environment.yml.
 Run test.py to predict the model on the test set, with the test dataset in the fold Dataset.
 
 We are currently organizing the relevant detail code, and will upload it progressively once it is prepared.
+email: jiko233@163.com
